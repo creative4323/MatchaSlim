@@ -1,132 +1,90 @@
-:root{
-  --primary:#0f766e;
-  --primary-dark:#115e59;
-  --accent:#d4af37;
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --text:#0f172a;
-  --muted:#475569;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Matcha Slim – Premium Balance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matcha Slim – pflanzliches Nahrungsergänzungsmittel für einen aktiven Lebensstil.">
 
-*{box-sizing:border-box}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-body{
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:linear-gradient(180deg,#f1f5f9,#ffffff);
-  color:var(--text);
-  line-height:1.7;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:24px;
-}
+<div class="container">
 
-.hero{
-  background:linear-gradient(135deg,#ffffff,#f0fdfa);
-  border-radius:26px;
-  padding:70px 40px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-  box-shadow:0 30px 70px rgba(15,118,110,.15);
-}
+  <section class="hero">
+    <div>
+      <div class="hero-badges">
+        <span>Nahrungsergänzungsmittel</span>
+        <span>Premium Qualität</span>
+        <span>Deutschland</span>
+      </div>
 
-.badges span{
-  background:#ecfeff;
-  color:var(--primary-dark);
-  padding:7px 14px;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:600;
-  margin:0 8px 10px 0;
-  display:inline-block;
-}
+      <h1>Natürliche Premium-Unterstützung<br>für Ihr Wohlbefinden</h1>
 
-h1{
-  font-size:44px;
-  line-height:1.2;
-  margin:18px 0;
-}
+      <p>
+        Matcha Slim ergänzt einen aktiven Lebensstil mit pflanzlichen
+        Inhaltsstoffen – modern, hochwertig und vertrauenswürdig.
+      </p>
 
-.hero p{
-  font-size:18px;
-  color:var(--muted);
-}
+      <div class="timer-box">
+        Angebot endet in:
+        <div id="timer">15:00</div>
+      </div>
 
-.cta{
-  display:inline-block;
-  margin-top:32px;
-  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-  color:#fff;
-  padding:18px 36px;
-  border-radius:14px;
-  font-size:18px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 20px 45px rgba(15,118,110,.45);
-  transition:.25s;
-}
+      <a class="cta-btn"
+         href="https://uh83be4498uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHCjXwYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc=facebook&subacc2=adset1&subacc3=instagram"
+         target="_blank">
+        Jetzt bestellen
+      </a>
+    </div>
 
-.cta:hover{
-  transform:translateY(-3px);
-}
+    <div class="product-box">
+      <img src="https://m.media-amazon.com/images/I/41edM-kBVOL._AC_.jpg" alt="Matcha Slim">
+      <p><strong>Natürlich • Premium • Sicher</strong></p>
+    </div>
+  </section>
 
-.product{
-  background:var(--card);
-  border-radius:22px;
-  padding:35px;
-  text-align:center;
-  border:1px solid #e2e8f0;
-}
+  <section class="features">
+    <div class="feature">
+      <h3>Pflanzliche Inhaltsstoffe</h3>
+      <p>Sorgfältig ausgewählt für den täglichen Einsatz.</p>
+    </div>
+    <div class="feature">
+      <h3>Einfache Anwendung</h3>
+      <p>Perfekt integrierbar in den Alltag.</p>
+    </div>
+    <div class="feature">
+      <h3>Für Erwachsene</h3>
+      <p>Ideal für aktive Menschen.</p>
+    </div>
+    <div class="feature">
+      <h3>Premium Rezeptur</h3>
+      <p>Modern, ausgewogen und hochwertig.</p>
+    </div>
+  </section>
 
-.product img{
-  max-width:240px;
-  border-radius:16px;
-  box-shadow:0 22px 50px rgba(0,0,0,.2);
-}
+  <footer>
+    Nahrungsergänzungsmittel – kein Arzneimittel.<br>
+    Ergebnisse können individuell variieren.
+  </footer>
 
-.features{
-  margin:90px 0;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:28px;
-}
+</div>
 
-.feature{
-  background:var(--card);
-  border-radius:22px;
-  padding:32px;
-  border-top:4px solid var(--accent);
-}
+<script>
+let time = 15 * 60;
+setInterval(() => {
+  let m = Math.floor(time / 60);
+  let s = time % 60;
+  document.getElementById("timer").innerHTML =
+    m + ":" + (s < 10 ? "0" : "") + s;
+  if (time > 0) time--;
+}, 1000);
+</script>
 
-.proof{
-  text-align:center;
-  margin:90px 0;
-}
-
-.stars{
-  font-size:26px;
-  color:var(--accent);
-}
-
-.faq{
-  background:var(--card);
-  border-radius:26px;
-  padding:45px;
-}
-
-footer{
-  margin:70px 0 30px;
-  text-align:center;
-  font-size:12px;
-  color:#64748b;
-}
-
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;text-align:center}
-  h1{font-size:36px}
-}
+</body>
+</html>
