@@ -1,283 +1,253 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Matcha Slim – Natürliche Balance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Matcha Slim – pflanzliches Nahrungsergänzungsmittel zur Unterstützung eines aktiven Lebensstils.">
+<meta charset="UTF-8">
+<title>Matcha Slim – Premium Balance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Matcha Slim – pflanzliches Nahrungsergänzungsmittel für einen aktiven Lebensstil.">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --green:#16a34a;
-      --green-dark:#15803d;
-      --dark:#0f172a;
-      --gray:#475569;
-      --bg:#f8fafc;
-    }
+<style>
+:root{
+  --primary:#0f766e;      /* Deep Emerald */
+  --primary-dark:#115e59;
+  --accent:#d4af37;       /* Soft Gold */
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+}
 
-    *{box-sizing:border-box}
+*{box-sizing:border-box}
 
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      background:linear-gradient(180deg,#ecfdf5,#f8fafc);
-      color:var(--dark);
-      line-height:1.7;
-    }
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(180deg,#f1f5f9,#ffffff);
+  color:var(--text);
+  line-height:1.7;
+}
 
-    img{max-width:100%;display:block}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:24px;
+}
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:24px;
-    }
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#ffffff,#f0fdfa);
+  border-radius:26px;
+  padding:70px 40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+  box-shadow:0 30px 70px rgba(15,118,110,.15);
+}
 
-    /* HERO */
-    .hero{
-      background:#fff;
-      border-radius:28px;
-      padding:70px 40px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center;
-      box-shadow:0 30px 70px rgba(0,0,0,.08);
-      animation:fadeUp .8s ease;
-    }
+.badges span{
+  display:inline-block;
+  background:#ecfeff;
+  color:var(--primary-dark);
+  padding:7px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  margin:0 8px 10px 0;
+}
 
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(30px)}
-      to{opacity:1;transform:none}
-    }
+h1{
+  font-size:44px;
+  line-height:1.2;
+  margin:18px 0;
+}
 
-    .hero-badges span{
-      display:inline-block;
-      background:#dcfce7;
-      color:var(--green-dark);
-      padding:7px 14px;
-      border-radius:999px;
-      font-size:13px;
-      font-weight:600;
-      margin:0 8px 10px 0;
-    }
+.hero p{
+  font-size:18px;
+  color:var(--muted);
+  max-width:520px;
+}
 
-    h1{
-      font-size:44px;
-      line-height:1.2;
-      margin:15px 0 20px;
-    }
+.cta{
+  display:inline-block;
+  margin-top:32px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+  color:#fff;
+  padding:18px 36px;
+  border-radius:14px;
+  font-size:18px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 20px 45px rgba(15,118,110,.45);
+  transition:.25s;
+}
 
-    .hero p{
-      font-size:18px;
-      color:var(--gray);
-      max-width:500px;
-    }
+.cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 28px 65px rgba(15,118,110,.6);
+}
 
-    .cta-btn{
-      display:inline-block;
-      margin-top:30px;
-      background:linear-gradient(135deg,#22c55e,#16a34a);
-      color:#fff;
-      padding:18px 34px;
-      border-radius:14px;
-      font-size:18px;
-      font-weight:700;
-      text-decoration:none;
-      box-shadow:0 18px 40px rgba(34,197,94,.45);
-      transition:.25s;
-    }
+/* PRODUCT */
+.product{
+  background:var(--card);
+  border-radius:22px;
+  padding:35px;
+  text-align:center;
+  border:1px solid #e2e8f0;
+}
 
-    .cta-btn:hover{
-      transform:translateY(-3px);
-      box-shadow:0 25px 60px rgba(34,197,94,.6);
-    }
+.product img{
+  max-width:240px;
+  border-radius:16px;
+  box-shadow:0 22px 50px rgba(0,0,0,.2);
+}
 
-    .product-box{
-      background:#f1f5f9;
-      border-radius:24px;
-      padding:35px;
-      text-align:center;
-    }
+.product p{
+  margin-top:18px;
+  font-weight:600;
+  color:var(--primary-dark);
+}
 
-    .product-box img{
-      max-width:240px;
-      margin:auto;
-      border-radius:18px;
-      box-shadow:0 22px 50px rgba(0,0,0,.18);
-      transition:.3s;
-    }
+/* FEATURES */
+.features{
+  margin:90px 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
 
-    .product-box img:hover{
-      transform:scale(1.06);
-    }
+.feature{
+  background:var(--card);
+  border-radius:22px;
+  padding:32px;
+  box-shadow:0 18px 40px rgba(0,0,0,.05);
+  border-top:4px solid var(--accent);
+}
 
-    .product-box p{
-      margin-top:18px;
-      font-weight:600;
-    }
+.feature h3{
+  margin-top:0;
+  color:var(--primary-dark);
+}
 
-    /* FEATURES */
-    .features{
-      margin:90px 0;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:28px;
-    }
+.feature p{
+  font-size:14px;
+  color:var(--muted);
+}
 
-    .feature{
-      background:#fff;
-      border-radius:22px;
-      padding:32px;
-      box-shadow:0 18px 40px rgba(0,0,0,.05);
-      transition:.25s;
-    }
+/* PROOF */
+.proof{
+  text-align:center;
+  margin:90px 0;
+}
 
-    .feature:hover{
-      transform:translateY(-6px);
-    }
+.stars{
+  font-size:26px;
+  color:var(--accent);
+}
 
-    .feature h3{margin-top:0}
+/* FAQ */
+.faq{
+  background:var(--card);
+  border-radius:26px;
+  padding:45px;
+  box-shadow:0 25px 60px rgba(0,0,0,.06);
+}
 
-    .feature p{
-      font-size:14px;
-      color:var(--gray);
-    }
+.faq summary{
+  font-weight:600;
+  cursor:pointer;
+}
 
-    /* SOCIAL PROOF */
-    .proof{
-      margin:90px 0;
-      text-align:center;
-    }
+/* FOOTER */
+footer{
+  margin:70px 0 30px;
+  text-align:center;
+  font-size:12px;
+  color:#64748b;
+}
 
-    .stars{
-      font-size:26px;
-      color:#facc15;
-    }
-
-    .proof h2{
-      font-size:32px;
-      margin:15px 0;
-    }
-
-    /* FAQ */
-    .faq{
-      background:#fff;
-      border-radius:26px;
-      padding:45px;
-      box-shadow:0 25px 60px rgba(0,0,0,.06);
-    }
-
-    .faq details{
-      margin-bottom:15px;
-    }
-
-    .faq summary{
-      cursor:pointer;
-      font-weight:600;
-    }
-
-    footer{
-      margin:70px 0 30px;
-      text-align:center;
-      font-size:12px;
-      color:#64748b;
-    }
-
-    @media(max-width:900px){
-      .hero{
-        grid-template-columns:1fr;
-        text-align:center;
-      }
-      h1{font-size:36px}
-      .hero p{margin:auto}
-    }
-  </style>
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  h1{font-size:36px}
+  .hero p{margin:auto}
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <section class="hero">
-    <div>
-      <div class="hero-badges">
-        <span>Nahrungsergänzungsmittel</span>
-        <span>Natürlich</span>
-        <span>DE Qualität</span>
-      </div>
-
-      <h1>Natürliche Unterstützung<br>für Ihr Gewichtsmanagement</h1>
-
-      <p>
-        Matcha Slim unterstützt einen aktiven Lebensstil und eine
-        ausgewogene Ernährung – modern, sanft und alltagstauglich.
-      </p>
-
-      <a class="cta-btn" href="YOUR_ADCOMBO_TRACKING_URL">
-        Jetzt bestellen
-      </a>
+<section class="hero">
+  <div>
+    <div class="badges">
+      <span>Nahrungsergänzungsmittel</span>
+      <span>Premium Qualität</span>
+      <span>Deutschland</span>
     </div>
 
-    <div class="product-box">
-      <img src="https://m.media-amazon.com/images/I/41edM-kBVOL._AC_.jpg" alt="Matcha Slim Produkt">
-      <p>Einfach. Natürlich. Vertrauenswürdig.</p>
-    </div>
-  </section>
+    <h1>Natürliche Premium-Unterstützung<br>für Ihr Wohlbefinden</h1>
 
-  <section class="features">
-    <div class="feature">
-      <h3>Pflanzliche Inhaltsstoffe</h3>
-      <p>Sorgfältig ausgewählte natürliche Komponenten.</p>
-    </div>
-    <div class="feature">
-      <h3>Einfache Anwendung</h3>
-      <p>Leicht integrierbar in den Alltag.</p>
-    </div>
-    <div class="feature">
-      <h3>Für Erwachsene</h3>
-      <p>Geeignet für einen aktiven Lebensstil.</p>
-    </div>
-    <div class="feature">
-      <h3>Moderne Rezeptur</h3>
-      <p>Basierend auf aktuellen Ernährungskonzepten.</p>
-    </div>
-  </section>
+    <p>
+      Matcha Slim ergänzt einen aktiven Lebensstil mit pflanzlichen
+      Inhaltsstoffen – modern, hochwertig und vertrauenswürdig.
+    </p>
 
-  <section class="proof">
-    <div class="stars">★★★★★</div>
-    <h2>Beliebt bei vielen zufriedenen Kunden</h2>
-    <p>Ergebnisse können individuell variieren.</p>
-  </section>
+    <a class="cta" href="https://uh83be4498uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHCjXwYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc=facebook&subacc2=adset1&subacc3=instagram" target="_blank">
+      Jetzt bestellen
+    </a>
+  </div>
 
-  <section class="faq">
-    <h2>Häufige Fragen</h2>
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/41edM-kBVOL._AC_.jpg" alt="Matcha Slim">
+    <p>Natürlich • Premium • Sicher</p>
+  </div>
+</section>
 
-    <details>
-      <summary>Ist Matcha Slim ein Medikament?</summary>
-      <p>Nein. Matcha Slim ist ein Nahrungsergänzungsmittel.</p>
-    </details>
+<section class="features">
+  <div class="feature">
+    <h3>Pflanzliche Inhaltsstoffe</h3>
+    <p>Sorgfältig ausgewählt für den täglichen Einsatz.</p>
+  </div>
+  <div class="feature">
+    <h3>Einfache Anwendung</h3>
+    <p>Perfekt integrierbar in den Alltag.</p>
+  </div>
+  <div class="feature">
+    <h3>Für Erwachsene</h3>
+    <p>Ideal für aktive Menschen.</p>
+  </div>
+  <div class="feature">
+    <h3>Premium Rezeptur</h3>
+    <p>Modern, ausgewogen und hochwertig.</p>
+  </div>
+</section>
 
-    <details>
-      <summary>Wie wird es verwendet?</summary>
-      <p>Gemäß den Anwendungshinweisen auf der Verpackung.</p>
-    </details>
+<section class="proof">
+  <div class="stars">★★★★★</div>
+  <h2>Vertrauen von vielen Kunden</h2>
+  <p>Ergebnisse können individuell variieren.</p>
+</section>
 
-    <details>
-      <summary>Gibt es garantierte Ergebnisse?</summary>
-      <p>Nein. Ergebnisse können individuell variieren.</p>
-    </details>
-  </section>
+<section class="faq">
+  <h2>Häufige Fragen</h2>
+  <details>
+    <summary>Ist Matcha Slim ein Medikament?</summary>
+    <p>Nein, es ist ein Nahrungsergänzungsmittel.</p>
+  </details>
+  <details>
+    <summary>Wie wird es eingenommen?</summary>
+    <p>Gemäß den Angaben auf der Verpackung.</p>
+  </details>
+</section>
 
-  <footer>
-    Dies ist ein Nahrungsergänzungsmittel. Kein Arzneimittel.<br>
-    Nicht zur Diagnose, Behandlung oder Vorbeugung von Krankheiten bestimmt.
-  </footer>
+<footer>
+  Nahrungsergänzungsmittel – kein Arzneimittel.<br>
+  Nicht zur Diagnose, Behandlung oder Vorbeugung von Krankheiten bestimmt.
+</footer>
 
 </div>
-
 </body>
 </html>
