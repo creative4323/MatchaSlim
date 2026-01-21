@@ -237,3 +237,8 @@ footer {
     margin: auto;
   }
 }
+.product-box img {
+  box-shadow: 
+    0 30px 70px rgba(15,118,110,.35),
+    0 0 0 12px rgba(22,163,74,.05);
+}
