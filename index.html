@@ -1,174 +1,194 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Matcha Slim – Natürliche Balance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Matcha Slim – pflanzliches Nahrungsergänzungsmittel zur Unterstützung eines aktiven Lebensstils." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matcha Slim – pflanzliches Nahrungsergänzungsmittel zur Unterstützung eines aktiven Lebensstils.">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --green: #16a34a;
-      --dark: #0f172a;
-      --gray: #475569;
-      --bg: #f1f5f9;
+      --green:#16a34a;
+      --green-dark:#15803d;
+      --dark:#0f172a;
+      --gray:#475569;
+      --light:#f8fafc;
     }
 
-    * { box-sizing: border-box; }
+    *{box-sizing:border-box}
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--dark);
-      line-height: 1.7;
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(180deg,#f0fdf4,#f8fafc);
+      color:var(--dark);
+      line-height:1.7;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 24px;
+    img{max-width:100%;display:block}
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:24px;
     }
 
     /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
-      border-radius: 20px;
-      padding: 60px 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+      background:#fff;
+      padding:70px 40px;
+      border-radius:28px;
+      box-shadow:0 30px 70px rgba(0,0,0,.08);
+      animation:fadeUp .8s ease;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      line-height: 1.2;
-      margin-bottom: 20px;
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(25px)}
+      to{opacity:1;transform:none}
     }
 
-    .hero p {
-      font-size: 18px;
-      color: var(--gray);
+    .badges span{
+      display:inline-block;
+      background:#dcfce7;
+      color:var(--green-dark);
+      padding:7px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:600;
+      margin:0 6px 10px 0;
     }
 
-    .hero-badges span {
-      display: inline-block;
-      background: #dcfce7;
-      color: var(--green);
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-right: 8px;
-      margin-bottom: 10px;
+    h1{
+      font-size:44px;
+      line-height:1.2;
+      margin:15px 0 20px;
     }
 
-    .cta-btn {
-      display: inline-block;
-      margin-top: 25px;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #fff;
-      padding: 16px 28px;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 12px 25px rgba(34,197,94,0.4);
-      transition: all 0.2s ease;
+    .hero p{
+      font-size:18px;
+      color:var(--gray);
+      max-width:480px;
     }
 
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 35px rgba(34,197,94,0.55);
+    .cta{
+      display:inline-block;
+      margin-top:30px;
+      background:linear-gradient(135deg,#22c55e,#16a34a);
+      color:#fff;
+      padding:18px 34px;
+      border-radius:14px;
+      font-size:18px;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 18px 40px rgba(34,197,94,.45);
+      transition:.25s;
     }
 
-    .product-box {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 30px;
-      text-align: center;
+    .cta:hover{
+      transform:translateY(-3px);
+      box-shadow:0 25px 60px rgba(34,197,94,.6);
     }
 
-    .product-box img {
-      max-width: 220px;
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-      transition: transform 0.25s ease;
-      margin-bottom: 15px;
+    .product{
+      background:#f8fafc;
+      border-radius:22px;
+      padding:35px;
+      text-align:center;
     }
 
-    .product-box img:hover {
-      transform: scale(1.05);
+    .product img{
+      max-width:240px;
+      margin:auto;
+      border-radius:18px;
+      box-shadow:0 22px 50px rgba(0,0,0,.18);
+      transition:.3s;
+    }
+
+    .product img:hover{transform:scale(1.06)}
+
+    .product p{
+      margin-top:18px;
+      font-weight:600;
     }
 
     /* FEATURES */
-    .features {
-      margin-top: 70px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
+    .features{
+      margin:90px 0;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:28px;
     }
 
-    .feature {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    .feature{
+      background:#fff;
+      padding:32px;
+      border-radius:20px;
+      box-shadow:0 18px 40px rgba(0,0,0,.05);
+      transition:.25s;
     }
 
-    .feature h3 {
-      margin-top: 0;
-      font-size: 18px;
+    .feature:hover{
+      transform:translateY(-6px);
     }
 
-    .feature p {
-      font-size: 14px;
-      color: var(--gray);
+    .feature h3{margin-top:0}
+
+    .feature p{
+      font-size:14px;
+      color:var(--gray);
     }
 
-    /* SOCIAL PROOF */
-    .proof {
-      margin: 80px 0;
-      text-align: center;
+    /* TRUST */
+    .trust{
+      text-align:center;
+      margin:90px 0;
     }
 
-    .stars {
-      font-size: 22px;
-      color: #facc15;
-      margin-bottom: 10px;
+    .stars{
+      font-size:26px;
+      color:#facc15;
+    }
+
+    .trust h2{
+      font-size:32px;
+      margin:15px 0;
     }
 
     /* FAQ */
-    .faq {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 40px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    .faq{
+      background:#fff;
+      padding:45px;
+      border-radius:24px;
+      box-shadow:0 20px 50px rgba(0,0,0,.06);
     }
 
-    .faq summary {
-      cursor: pointer;
-      font-weight: 600;
+    .faq details{
+      margin-bottom:15px;
     }
 
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      font-size: 12px;
-      color: #64748b;
+    .faq summary{
+      cursor:pointer;
+      font-weight:600;
     }
 
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+    footer{
+      margin:70px 0 30px;
+      text-align:center;
+      font-size:12px;
+      color:#64748b;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;text-align:center}
+      h1{font-size:36px}
+      .hero p{margin:auto}
     }
   </style>
 </head>
@@ -177,61 +197,57 @@
 
 <div class="container">
 
-  <!-- HERO -->
   <section class="hero">
     <div>
-      <div class="hero-badges">
+      <div class="badges">
         <span>Nahrungsergänzungsmittel</span>
         <span>Natürlich</span>
-        <span>DE Qualität</span>
+        <span>Deutschland</span>
       </div>
 
       <h1>Natürliche Unterstützung<br>für Ihr Gewichtsmanagement</h1>
 
       <p>
         Matcha Slim ergänzt einen aktiven Lebensstil und eine ausgewogene
-        Ernährung – modern, einfach und alltagstauglich.
+        Ernährung – modern, sanft und alltagstauglich.
       </p>
 
-      <a class="cta-btn" href="YOUR_ADCOMBO_TRACKING_URL">
+      <a href="YOUR_ADCOMBO_TRACKING_URL" class="cta">
         Jetzt bestellen
       </a>
     </div>
 
-    <div class="product-box">
+    <div class="product">
       <img src="https://m.media-amazon.com/images/I/41edM-kBVOL._AC_.jpg" alt="Matcha Slim Produkt">
-      <p><strong>Einfach. Natürlich. Modern.</strong></p>
+      <p>Einfach. Natürlich. Vertrauenswürdig.</p>
     </div>
   </section>
 
-  <!-- FEATURES -->
   <section class="features">
     <div class="feature">
       <h3>Pflanzliche Inhaltsstoffe</h3>
-      <p>Sorgfältig ausgewählte Komponenten für den täglichen Gebrauch.</p>
+      <p>Ausgewählte natürliche Komponenten für den täglichen Gebrauch.</p>
     </div>
     <div class="feature">
       <h3>Einfache Anwendung</h3>
-      <p>Leicht in den Alltag integrierbar.</p>
+      <p>Leicht integrierbar – ohne komplizierte Abläufe.</p>
     </div>
     <div class="feature">
       <h3>Für Erwachsene</h3>
       <p>Geeignet für Menschen mit aktivem Lebensstil.</p>
     </div>
     <div class="feature">
-      <h3>Moderne Formel</h3>
-      <p>Basierend auf aktuellen Ernährungskonzepten.</p>
+      <h3>Moderne Rezeptur</h3>
+      <p>Orientiert an aktuellen Ernährungskonzepten.</p>
     </div>
   </section>
 
-  <!-- SOCIAL PROOF -->
-  <section class="proof">
+  <section class="trust">
     <div class="stars">★★★★★</div>
     <h2>Beliebt bei vielen zufriedenen Kunden</h2>
     <p>Ergebnisse können individuell variieren.</p>
   </section>
 
-  <!-- FAQ -->
   <section class="faq">
     <h2>Häufige Fragen</h2>
 
@@ -241,13 +257,13 @@
     </details>
 
     <details>
-      <summary>Wie wird es verwendet?</summary>
+      <summary>Wie wird es eingenommen?</summary>
       <p>Gemäß den Anwendungshinweisen auf der Verpackung.</p>
     </details>
 
     <details>
-      <summary>Gibt es garantierte Ergebnisse?</summary>
-      <p>Nein. Ergebnisse können individuell variieren.</p>
+      <summary>Sind Ergebnisse garantiert?</summary>
+      <p>Nein. Ergebnisse können individuell unterschiedlich sein.</p>
     </details>
   </section>
 
