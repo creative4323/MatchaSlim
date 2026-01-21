@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Matcha Slim – pflanzliches Nahrungsergänzungsmittel zur Unterstützung eines aktiven Lebensstils." />
 
-  <!-- Fonts -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -17,9 +17,7 @@
       --bg: #f1f5f9;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -98,7 +96,15 @@
 
     .product-box img {
       max-width: 220px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+      transition: transform 0.25s ease;
       margin-bottom: 15px;
+    }
+
+    .product-box img:hover {
+      transform: scale(1.05);
     }
 
     /* FEATURES */
@@ -132,11 +138,6 @@
       text-align: center;
     }
 
-    .proof h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-
     .stars {
       font-size: 22px;
       color: #facc15;
@@ -151,20 +152,11 @@
       box-shadow: 0 15px 30px rgba(0,0,0,0.06);
     }
 
-    .faq h2 {
-      margin-top: 0;
-    }
-
-    .faq details {
-      margin-bottom: 15px;
-    }
-
     .faq summary {
       cursor: pointer;
       font-weight: 600;
     }
 
-    /* FOOTER */
     footer {
       margin-top: 60px;
       text-align: center;
@@ -183,90 +175,88 @@
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="hero-badges">
-          <span>Nahrungsergänzungsmittel</span>
-          <span>Natürlich</span>
-          <span>DE Qualität</span>
-        </div>
-
-        <h1>Natürliche Unterstützung<br>für Ihr Gewichtsmanagement</h1>
-
-        <p>
-          Matcha Slim wurde entwickelt, um einen aktiven Lebensstil
-          und eine ausgewogene Ernährung sinnvoll zu ergänzen – einfach
-          und alltagstauglich.
-        </p>
-
-        <a class="cta-btn" href="YOUR_ADCOMBO_TRACKING_URL">
-          Jetzt bestellen
-        </a>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-badges">
+        <span>Nahrungsergänzungsmittel</span>
+        <span>Natürlich</span>
+        <span>DE Qualität</span>
       </div>
 
-      <div class="product-box">
-        <img src="https://via.placeholder.com/220x300?text=Matcha+Slim" alt="Matcha Slim">
-        <p><strong>Einfach. Natürlich. Modern.</strong></p>
-      </div>
-    </section>
+      <h1>Natürliche Unterstützung<br>für Ihr Gewichtsmanagement</h1>
 
-    <!-- FEATURES -->
-    <section class="features">
-      <div class="feature">
-        <h3>Pflanzliche Inhaltsstoffe</h3>
-        <p>Sorgfältig ausgewählte Komponenten für den täglichen Gebrauch.</p>
-      </div>
-      <div class="feature">
-        <h3>Einfache Anwendung</h3>
-        <p>Leicht in den Alltag integrierbar – ohne komplizierte Routinen.</p>
-      </div>
-      <div class="feature">
-        <h3>Für Erwachsene</h3>
-        <p>Entwickelt für Menschen mit aktivem Lebensstil.</p>
-      </div>
-      <div class="feature">
-        <h3>Moderne Formel</h3>
-        <p>Basierend auf aktuellen Ernährungskonzepten.</p>
-      </div>
-    </section>
+      <p>
+        Matcha Slim ergänzt einen aktiven Lebensstil und eine ausgewogene
+        Ernährung – modern, einfach und alltagstauglich.
+      </p>
 
-    <!-- SOCIAL PROOF -->
-    <section class="proof">
-      <div class="stars">★★★★★</div>
-      <h2>Beliebt bei vielen zufriedenen Kunden</h2>
-      <p>Erfahrungen können individuell variieren.</p>
-    </section>
+      <a class="cta-btn" href="YOUR_ADCOMBO_TRACKING_URL">
+        Jetzt bestellen
+      </a>
+    </div>
 
-    <!-- FAQ -->
-    <section class="faq">
-      <h2>Häufige Fragen</h2>
+    <div class="product-box">
+      <img src="https://m.media-amazon.com/images/I/41edM-kBVOL._AC_.jpg" alt="Matcha Slim Produkt">
+      <p><strong>Einfach. Natürlich. Modern.</strong></p>
+    </div>
+  </section>
 
-      <details>
-        <summary>Ist Matcha Slim ein Medikament?</summary>
-        <p>Nein. Matcha Slim ist ein Nahrungsergänzungsmittel.</p>
-      </details>
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <h3>Pflanzliche Inhaltsstoffe</h3>
+      <p>Sorgfältig ausgewählte Komponenten für den täglichen Gebrauch.</p>
+    </div>
+    <div class="feature">
+      <h3>Einfache Anwendung</h3>
+      <p>Leicht in den Alltag integrierbar.</p>
+    </div>
+    <div class="feature">
+      <h3>Für Erwachsene</h3>
+      <p>Geeignet für Menschen mit aktivem Lebensstil.</p>
+    </div>
+    <div class="feature">
+      <h3>Moderne Formel</h3>
+      <p>Basierend auf aktuellen Ernährungskonzepten.</p>
+    </div>
+  </section>
 
-      <details>
-        <summary>Wie wird es verwendet?</summary>
-        <p>Gemäß den Anwendungshinweisen auf der Verpackung.</p>
-      </details>
+  <!-- SOCIAL PROOF -->
+  <section class="proof">
+    <div class="stars">★★★★★</div>
+    <h2>Beliebt bei vielen zufriedenen Kunden</h2>
+    <p>Ergebnisse können individuell variieren.</p>
+  </section>
 
-      <details>
-        <summary>Gibt es garantierte Ergebnisse?</summary>
-        <p>Nein. Ergebnisse können individuell variieren.</p>
-      </details>
-    </section>
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Häufige Fragen</h2>
 
-    <!-- FOOTER -->
-    <footer>
-      Dies ist ein Nahrungsergänzungsmittel. Kein Arzneimittel.<br>
-      Nicht zur Diagnose, Behandlung oder Vorbeugung von Krankheiten bestimmt.
-    </footer>
+    <details>
+      <summary>Ist Matcha Slim ein Medikament?</summary>
+      <p>Nein. Matcha Slim ist ein Nahrungsergänzungsmittel.</p>
+    </details>
 
-  </div>
+    <details>
+      <summary>Wie wird es verwendet?</summary>
+      <p>Gemäß den Anwendungshinweisen auf der Verpackung.</p>
+    </details>
+
+    <details>
+      <summary>Gibt es garantierte Ergebnisse?</summary>
+      <p>Nein. Ergebnisse können individuell variieren.</p>
+    </details>
+  </section>
+
+  <footer>
+    Dies ist ein Nahrungsergänzungsmittel. Kein Arzneimittel.<br>
+    Nicht zur Diagnose, Behandlung oder Vorbeugung von Krankheiten bestimmt.
+  </footer>
+
+</div>
 
 </body>
 </html>
