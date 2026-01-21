@@ -1,14 +1,15 @@
-/* =========================
+/* ===============================
    ROOT COLORS & RESET
-========================= */
+================================ */
 :root {
-  --primary: #0f766e;
-  --primary-dark: #115e59;
-  --accent: #d4af37;
+  --primary: #16a34a;        /* Premium Green */
+  --primary-dark: #15803d;
+  --accent: #22c55e;
   --bg: #f1f5f9;
   --white: #ffffff;
   --text: #0f172a;
   --muted: #475569;
+  --soft: #ecfdf5;
   --warning-bg: #fff7ed;
   --warning-border: #f59e0b;
 }
@@ -19,12 +20,12 @@
   box-sizing: border-box;
 }
 
-/* =========================
+/* ===============================
    BODY & CONTAINER
-========================= */
+================================ */
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #f1f5f9, #ffffff);
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
   color: var(--text);
   line-height: 1.7;
 }
@@ -35,22 +36,23 @@ body {
   padding: 24px;
 }
 
-/* =========================
+/* ===============================
    HERO SECTION
-========================= */
+================================ */
 .hero {
-  background: linear-gradient(135deg, #ffffff, #f0fdfa);
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
   border-radius: 26px;
-  padding: 60px 35px;
+  padding: 60px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 45px;
+  gap: 50px;
   align-items: center;
-  box-shadow: 0 30px 70px rgba(15, 118, 110, 0.15);
+  box-shadow: 0 30px 70px rgba(22,163,74,0.15);
 }
 
 .hero h1 {
   font-size: 42px;
+  font-weight: 800;
   line-height: 1.2;
   margin: 18px 0;
 }
@@ -61,69 +63,93 @@ body {
   max-width: 520px;
 }
 
-/* =========================
+/* ===============================
    BADGES
-========================= */
+================================ */
 .hero-badges span {
   display: inline-block;
-  background: #ecfeff;
+  background: #dcfce7;
   color: var(--primary-dark);
-  padding: 8px 15px;
+  padding: 8px 16px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
-  margin: 0 8px 10px 0;
+  margin-right: 8px;
+  margin-bottom: 10px;
 }
 
-/* =========================
+/* ===============================
    CTA BUTTON
-========================= */
+================================ */
 .cta-btn {
   display: inline-block;
   margin-top: 28px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: var(--white);
   padding: 18px 36px;
   border-radius: 14px;
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 20px 45px rgba(15, 118, 110, 0.45);
+  box-shadow: 0 18px 45px rgba(34,197,94,0.45);
   transition: all 0.25s ease;
 }
 
 .cta-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 28px 65px rgba(15, 118, 110, 0.6);
+  box-shadow: 0 28px 65px rgba(34,197,94,0.65);
 }
 
-/* =========================
+/* ===============================
+   TIMER (URGENCY)
+================================ */
+.timer-box {
+  background: var(--warning-bg);
+  border: 1px dashed var(--warning-border);
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+#timer {
+  font-size: 22px;
+  color: #b45309;
+}
+
+/* ===============================
    PRODUCT BOX
-========================= */
+================================ */
 .product-box {
   background: var(--white);
   border-radius: 22px;
   padding: 35px;
   text-align: center;
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 22px 55px rgba(0,0,0,0.08);
 }
 
 .product-box img {
   max-width: 240px;
   width: 100%;
   border-radius: 18px;
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.product-box img:hover {
+  transform: scale(1.05);
 }
 
 .product-box p {
-  margin-top: 16px;
+  margin-top: 18px;
   font-weight: 600;
   color: var(--primary-dark);
 }
 
-/* =========================
-   FEATURES
-========================= */
+/* ===============================
+   FEATURES SECTION
+================================ */
 .features {
   margin: 90px 0;
   display: grid;
@@ -135,7 +161,7 @@ body {
   background: var(--white);
   border-radius: 22px;
   padding: 32px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.05);
   border-top: 4px solid var(--accent);
   transition: transform 0.25s ease;
 }
@@ -145,7 +171,8 @@ body {
 }
 
 .feature h3 {
-  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
   color: var(--primary-dark);
 }
 
@@ -154,29 +181,34 @@ body {
   color: var(--muted);
 }
 
-/* =========================
-   SUMMARY
-========================= */
+/* ===============================
+   SUMMARY SECTION
+================================ */
 .summary {
-  background: var(--white);
-  border-radius: 24px;
-  padding: 45px;
-  margin-bottom: 80px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+  margin: 80px 0 40px;
+  text-align: center;
 }
 
 .summary h2 {
-  margin-bottom: 15px;
+  font-size: 30px;
+  margin-bottom: 14px;
 }
 
-/* =========================
+.summary p {
+  max-width: 720px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* ===============================
    FAQ
-========================= */
+================================ */
 .faq {
   background: var(--white);
   border-radius: 26px;
   padding: 45px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.06);
 }
 
 .faq h2 {
@@ -184,7 +216,7 @@ body {
 }
 
 .faq details {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .faq summary {
@@ -192,37 +224,19 @@ body {
   font-weight: 600;
 }
 
-/* =========================
-   TIMER
-========================= */
-.timer-box {
-  background: var(--warning-bg);
-  border: 1px dashed var(--warning-border);
-  border-radius: 14px;
-  padding: 14px 18px;
-  display: inline-block;
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-#timer {
-  font-size: 22px;
-  color: #b45309;
-}
-
-/* =========================
+/* ===============================
    FOOTER
-========================= */
+================================ */
 footer {
-  margin: 80px 0 30px;
+  margin: 70px 0 30px;
   text-align: center;
   font-size: 12px;
   color: #64748b;
 }
 
-/* =========================
+/* ===============================
    RESPONSIVE
-========================= */
+================================ */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -236,9 +250,4 @@ footer {
   .hero p {
     margin: auto;
   }
-}
-.product-box img {
-  box-shadow: 
-    0 30px 70px rgba(15,118,110,.35),
-    0 0 0 12px rgba(22,163,74,.05);
 }
