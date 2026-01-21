@@ -1,15 +1,18 @@
-/* ===============================
-   ROOT & RESET
-================================ */
+/* =================================
+   ROOT COLORS & GLOBAL RESET
+================================= */
 :root {
   --primary: #16a34a;
   --primary-dark: #15803d;
   --accent: #22c55e;
-  --bg: #f1f5f9;
-  --soft: #ecfdf5;
-  --white: #ffffff;
-  --text: #0f172a;
+
+  --dark: #0f172a;
   --muted: #475569;
+  --light: #94a3b8;
+
+  --bg: #f1f5f9;
+  --card: #ffffff;
+
   --warning-bg: #fff7ed;
   --warning-border: #f59e0b;
 }
@@ -20,13 +23,13 @@
   box-sizing: border-box;
 }
 
-/* ===============================
+/* =================================
    BODY & CONTAINER
-================================ */
+================================= */
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #f8fafc, #ffffff);
-  color: var(--text);
+  background: var(--bg);
+  color: var(--dark);
   line-height: 1.7;
 }
 
@@ -36,25 +39,25 @@ body {
   padding: 24px;
 }
 
-/* ===============================
+/* =================================
    HERO SECTION
-================================ */
+================================= */
 .hero {
   background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
   border-radius: 26px;
   padding: 60px 40px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
+  gap: 40px;
   align-items: center;
-  box-shadow: 0 30px 70px rgba(22,163,74,0.15);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
 }
 
 .hero-left h1 {
   font-size: 42px;
   font-weight: 800;
   line-height: 1.2;
-  margin: 18px 0;
+  margin: 20px 0;
 }
 
 .hero-left p {
@@ -63,14 +66,14 @@ body {
   max-width: 520px;
 }
 
-/* ===============================
+/* =================================
    BADGES
-================================ */
+================================= */
 .hero-badges span {
   display: inline-block;
   background: #dcfce7;
   color: var(--primary-dark);
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
@@ -78,39 +81,40 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===============================
-   TIMER
-================================ */
+/* =================================
+   TIMER (URGENCY)
+================================= */
 .timer-box {
   background: var(--warning-bg);
   border: 1px dashed var(--warning-border);
   border-radius: 14px;
   padding: 14px 18px;
   display: inline-block;
-  margin: 18px 0;
+  margin: 22px 0;
   font-weight: 600;
 }
 
 #timer {
   font-size: 22px;
   color: #b45309;
+  margin-top: 6px;
 }
 
-/* ===============================
+/* =================================
    CTA BUTTON
-================================ */
+================================= */
 .cta-btn {
   display: inline-block;
   margin-top: 20px;
-  background: linear-gradient(135deg, var(--accent), var(--primary));
-  color: var(--white);
-  padding: 18px 36px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  padding: 18px 34px;
   border-radius: 16px;
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
   text-align: center;
-  box-shadow: 0 18px 45px rgba(34,197,94,0.45);
+  box-shadow: 0 18px 40px rgba(34,197,94,0.45);
   transition: all 0.25s ease;
 }
 
@@ -119,31 +123,33 @@ body {
   font-size: 12px;
   font-weight: 500;
   opacity: 0.9;
+  margin-top: 4px;
 }
 
 .cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 28px 65px rgba(34,197,94,0.65);
+  transform: translateY(-4px);
+  box-shadow: 0 28px 60px rgba(34,197,94,0.6);
 }
 
-/* ===============================
+/* =================================
    TRUST TEXT
-================================ */
+================================= */
 .trust-text {
   margin-top: 16px;
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 14px;
+  color: var(--primary-dark);
+  font-weight: 600;
 }
 
-/* ===============================
+/* =================================
    PRODUCT BOX
-================================ */
+================================= */
 .product-box {
-  background: var(--white);
+  background: var(--card);
   border-radius: 22px;
-  padding: 35px;
+  padding: 30px;
   text-align: center;
-  box-shadow: 0 22px 55px rgba(0,0,0,0.08);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
 }
 
 .product-box img {
@@ -155,30 +161,30 @@ body {
 }
 
 .product-box img:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .product-box p {
-  margin-top: 18px;
-  font-weight: 600;
+  margin-top: 16px;
+  font-weight: 700;
   color: var(--primary-dark);
 }
 
-/* ===============================
+/* =================================
    FEATURES
-================================ */
+================================= */
 .features {
-  margin: 90px 0;
+  margin: 90px 0 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  gap: 26px;
 }
 
 .feature {
-  background: var(--white);
-  border-radius: 22px;
-  padding: 32px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.05);
+  background: var(--card);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
   border-top: 4px solid var(--accent);
   transition: transform 0.25s ease;
 }
@@ -188,8 +194,8 @@ body {
 }
 
 .feature h3 {
-  margin-bottom: 10px;
   font-size: 18px;
+  margin-bottom: 10px;
   color: var(--primary-dark);
 }
 
@@ -198,38 +204,58 @@ body {
   color: var(--muted);
 }
 
-/* ===============================
-   SUMMARY
-================================ */
+/* =================================
+   SUMMARY BOXES
+================================= */
 .summary {
-  margin: 70px 0 40px;
+  margin: 80px 0;
   text-align: center;
 }
 
 .summary h2 {
   font-size: 30px;
-  margin-bottom: 14px;
+  margin-bottom: 30px;
 }
 
-.summary ul {
-  list-style: none;
-  margin-top: 16px;
+.summary-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
 }
 
-.summary li {
-  font-size: 15px;
-  color: var(--muted);
+.summary-box {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 30px 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--accent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.summary-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 65px rgba(0,0,0,0.1);
+}
+
+.summary-box h4 {
+  font-size: 18px;
   margin-bottom: 8px;
+  color: var(--primary-dark);
 }
 
-/* ===============================
+.summary-box p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* =================================
    FAQ
-================================ */
+================================= */
 .faq {
-  background: var(--white);
-  border-radius: 26px;
-  padding: 45px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+  background: var(--card);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.06);
 }
 
 .faq h2 {
@@ -237,7 +263,7 @@ body {
 }
 
 .faq details {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
 .faq summary {
@@ -245,49 +271,43 @@ body {
   font-weight: 600;
 }
 
-.faq p {
-  margin-top: 6px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* ===============================
+/* =================================
    LEGAL
-================================ */
+================================= */
 .legal {
   margin-top: 60px;
-  background: var(--white);
+  background: var(--card);
+  padding: 30px;
   border-radius: 18px;
-  padding: 28px;
   font-size: 13px;
   color: var(--muted);
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* ===============================
+/* =================================
    FOOTER
-================================ */
+================================= */
 footer {
-  margin: 50px 0 20px;
+  margin: 70px 0 30px;
   text-align: center;
   font-size: 12px;
-  color: #64748b;
+  color: var(--light);
 }
 
-/* ===============================
+/* =================================
    RESPONSIVE
-================================ */
+================================= */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .hero-left h1 {
-    font-size: 34px;
-  }
-
   .hero-left p {
     margin: auto;
+  }
+
+  .hero-left h1 {
+    font-size: 34px;
   }
 }
