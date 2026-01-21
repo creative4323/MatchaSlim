@@ -251,3 +251,71 @@ footer{
 </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Matcha Slim – Natürliche Balance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matcha Slim – pflanzliches Nahrungsergänzungsmittel.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS CONNECT -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <section class="hero">
+    <div>
+      <div class="hero-badges">
+        <span>Nahrungsergänzungsmittel</span>
+        <span>Natürlich</span>
+        <span>DE Qualität</span>
+      </div>
+
+      <h1>Natürliche Unterstützung<br>für Ihr Gewichtsmanagement</h1>
+
+      <p>
+        Matcha Slim ergänzt einen aktiven Lebensstil
+        und eine ausgewogene Ernährung.
+      </p>
+
+      <div class="timer-box">
+        Angebot endet in:
+        <div id="timer">15:00</div>
+      </div>
+
+      <a class="cta-btn"
+         href="https://uh83be4498uh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHCjXwYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx&subacc=facebook&subacc2=adset1&subacc3=instagram"
+         onclick="fbq('track','InitiateCheckout');">
+        Jetzt bestellen
+      </a>
+    </div>
+
+    <div class="product-box">
+      <img src="https://m.media-amazon.com/images/I/41edM-kBVOL._AC_.jpg" alt="Matcha Slim">
+      <p><strong>Einfach. Natürlich. Modern.</strong></p>
+    </div>
+  </section>
+
+</div>
+
+<!-- TIMER SCRIPT -->
+<script>
+let time = 15 * 60;
+setInterval(() => {
+  let m = Math.floor(time / 60);
+  let s = time % 60;
+  document.getElementById("timer").innerHTML =
+    m + ":" + (s < 10 ? "0" : "") + s;
+  if (time > 0) time--;
+}, 1000);
+</script>
+
+</body>
+</html>
